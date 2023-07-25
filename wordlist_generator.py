@@ -67,6 +67,5 @@ class Randomiser:
             f.write(word)
         f.close()
 
-
-r = Randomiser()
-r.generate_wordlist(sys.argv[1], int(sys.argv[2]))
+if __name__ == "__main__":
+    Randomiser().generate_wordlist(sys.argv[1], int(sys.argv[2]))
