@@ -1,6 +1,9 @@
 import random
 import datetime
 import sys
+import argparse
+
+
 
 class Randomiser:
     def __init__(self):
@@ -68,4 +71,10 @@ class Randomiser:
         f.close()
 
 if __name__ == "__main__":
-    Randomiser().generate_wordlist(sys.argv[1], int(sys.argv[2]))
+    parser = argparse.ArgumentParser(
+        description='generates password mutations from a seed word and outputs them to a .txt file')
+    parser.add_argument("--seed", help="the seed word to be mutated", default="password")
+    parser.add_argument("--number", help="the number of mutations", default=5, type=int)
+    args = parser.parse_args()
+
+    Randomiser().generate_wordlist(args.seed, args.number)
