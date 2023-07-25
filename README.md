@@ -7,6 +7,6 @@ This will output a plain text file; \<seed word\>.txt with the number of mutatio
 `python ./wordlist_generator.py <seed word> <number>`
 
 ## Example
-This will generate 100 mutations based on the word 'secretpassword'.
+This will generate 100 mutations based on the word 'secretpassword' and output them to the file `secretpassword.txt`.
 
 `python ./wordlist_generator.py 'secretpassword' 100'`
